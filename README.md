@@ -12,22 +12,22 @@ A simple Discord bot to manage a checklist with tasks you can add, edit, remove,
 - Remove tasks
 - List all tasks with clear `[ ]` (not done) and `[x]` (done) formatting
 - Mark tasks as done
-- Sort tasks alphabetically or by status (done/undone)
+- Sort tasks alphabetically (Ascending/Descending)
 - Persist tasks to a local JSON file (`tasks.json`)
 
 ---
 
 ## Commands
 
-| Command    | Usage                           | Description                            |
-| ---------- | ------------------------------- | -------------------------------------- |
-| `!add`     | `!add Buy milk`                 | Add a new task                         |
-| `!bulkadd` | `!bulkadd Task1; Task2; Task3`  | Add multiple tasks separated by `;`    |
-| `!edit`    | `!edit 1 New task name`         | Edit task at position 1                |
-| `!remove`  | `!remove 2`                     | Remove task at position 2              |
-| `!list`    | `!list`                         | List all tasks                         |
-| `!done`    | `!done 3`                       | Mark task 3 as done                    |
-| `!sort`    | `!sort alpha` or `!sort status` | Sort tasks alphabetically or by status |
+| Command    | Usage                           | Description                                      |
+| ---------- | ------------------------------- | ------------------------------------------------ |
+| `!add`     | `!add Buy milk`                 | Add a new task                                   |
+| `!bulkadd` | `!bulkadd Task1; Task2; Task3`  | Add multiple tasks separated by `;`              |
+| `!edit`    | `!edit 1 New task name`         | Edit task at position 1                          |
+| `!remove`  | `!remove 2`                     | Remove task at position 2                        |
+| `!list`    | `!list`                         | List all tasks                                   |
+| `!done`    | `!done 3`                       | Mark task 3 as done                              |
+| `!sort`    | `!sort asc` or `!sort desc`     | Sort tasks alphabetically (Ascending/Descending) |
 
 ---
 
