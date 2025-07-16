@@ -35,6 +35,35 @@ client.on("messageCreate", (message) => {
   const args = message.content.split(" ")
   const command = args.shift().toLowerCase()
 
+  if (command === "!help") {
+    const addCommand = "`!add <task>` - Add a new task to the checklist."
+    const bulkAddCommand =
+      "`!bulkadd <task1; task2; ...>` - Add multiple tasks at once, separated by `;`."
+    const listCommand = "`!list` - List all tasks in the checklist."
+    const doneCommand = "`!done <task number>` - Mark status a task as done."
+    const undoneCommand =
+      "`!undone <task number>` - Mark status a task as undone."
+    const editCommand =
+      "`!edit <task number> <new task>` - Edit an existing task."
+    const removeCommand =
+      "`!remove <task number>` - Remove a task from the checklist."
+    const sortCommand =
+      "`!sort <asc|desc>` - Sort tasks in ascending or descending order."
+
+    const helpText = `**Checklisto Bot Commands:**\n
+    ----------------------------------------------------------------\n
+    ${addCommand}\n
+    ${bulkAddCommand}\n
+    ${listCommand}\n
+    ${doneCommand}\n
+    ${undoneCommand}\n
+    ${editCommand}\n
+    ${removeCommand}\n
+    ${sortCommand}\n`
+
+    message.channel.send(helpText)
+  }
+
   if (command === "!add") {
     const task = args.join(" ")
     if (!task) return message.channel.send("Please provide a task.")
@@ -89,7 +118,21 @@ client.on("messageCreate", (message) => {
 
     saveTasks()
 
-    message.channel.send(`Marked task ${index + 1} as done.`)
+    message.channel.send(`Marked task ${index + 1} status as done.`)
+  }
+
+  if (command === "!undone") {
+    const index = parseInt(args[0]) - 1
+
+    if (isNaN(index) || index < 0 || index >= checklist.length) {
+      return message.channel.send("Invalid task number.")
+    }
+
+    checklist[index].status = false
+
+    saveTasks()
+
+    message.channel.send(`Marked task ${index + 1} status as undone.`)
   }
 
   if (command === "!edit") {
