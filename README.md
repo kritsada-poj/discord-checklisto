@@ -46,7 +46,7 @@ A simple Discord bot to manage a checklist with tasks you can add, edit, remove,
 2. Open your terminal and navigate to the project folder
 3. Install dependencies:
    ```bash
-   npm install discord.js
+   npm install
    ```
 4. Replace `YOUR_BOT_TOKEN_HERE` in `index.js` with your bot token
 5. Run the bot:
