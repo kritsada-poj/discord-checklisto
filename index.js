@@ -135,7 +135,7 @@ client.on("messageCreate", (message) => {
 
       message.channel.send("Tasks sorted Ascending order (A - Z).")
     } else if (option === "desc") {
-      checklist.sort((a, b) => a.name.localeCompare(b.name))
+      checklist.sort((a, b) => b.name.localeCompare(a.name))
 
       saveTasks()
 
