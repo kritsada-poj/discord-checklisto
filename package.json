@@ -1,5 +1,5 @@
 {
-  "name": "discord-checklist-bot",
+  "name": "discord-checklisto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,6 @@
   "type": "commonjs",
   "dependencies": {
     "discord.js": "^14.21.0"
-  }
+  },
+  "repository": "git@github.com:kritsada-poj/discord-checklisto.git"
 }
